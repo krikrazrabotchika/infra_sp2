@@ -2,9 +2,9 @@ FROM python:3.7-slim
 
 RUN apt update && apt install -y gcc libpq-dev
 
-WORKDIR /app/api_yamdb
+WORKDIR /app
 
-COPY api_yamdb/requirements.txt /app
+COPY api_yamdb/requirements.txt ./
 
 RUN pip3 install -r /app/requirements.txt --no-cache-dir
 
